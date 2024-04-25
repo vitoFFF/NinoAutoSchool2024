@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nino</title>
+  <!-- Leaflet CSS -->
+
+  <style>
+     #lat, #long {
+            color: blue; /* Change the color to blue */
+            font-size: 18px; /* Change the font size */
+            margin-bottom: 10px; /* Add space between the elements */
+        }
+</style>
+  
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+  <!-- Leaflet JavaScript -->
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+   <!-- Link to external CSS file -->
+   <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="title">
+    <h1>ნინოს ავტოსკოლა !</h1>
+</div>
+    
+<!-- Buttons -->
+<div class="button-container">
+    
+    <!-- Add a start button --><button id="startNavigation" class="btn common-width">Start Navigation</button>
+
+    <audio id="audio100left" src="audio/100left.mp3" preload="auto"></audio>
+    <audio id="audioLeft" src="audio/left.mp3" preload="auto"></audio>
+
+    <audio id="audio100right" src="audio/100right.mp3"></audio>
+
+    <audio id="audioRight" src="audio/right.mp3" preload="auto"></audio>
+    <audio id="audioStart" src="audio/start.mp3" preload="auto"></audio>
+
+    <button class="btn common-width" onclick="changeRoute('N1')">Route N1</button>
+    <button class="btn common-width" onclick="changeRoute('N1')">Route N2</button> 
+
+    <button  class="btn common-width" id="toggleMap">Toggle Satellite View</button>
+
+      
+
+
+   
+
+    <p id="lat"></p>
+<p id="long"></p>
+
+
+
+</div>
+
+
+<div id="map"></div>
+
+<!-- External JavaScript File -->
+<script src="script.js" defer></script>
+
+</body>
+</html>
